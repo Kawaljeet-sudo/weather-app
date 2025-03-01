@@ -10,7 +10,7 @@ function App() {
   
 
   const fetchWeather = (cityname) => {
-    axios.get(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityname}&aqi=yes`)
+    axios.get(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityname}&aqi=yes`)
       .then(function (response) {
         setWeather(response.data)
       })
@@ -21,7 +21,7 @@ function App() {
   }
 
   const fetchForecast = (cityname) => {
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityname}&aqi=yes&days=5`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityname}&aqi=yes&days=5`)
       .then(function (response) {
         setForecast(response.data)
       })

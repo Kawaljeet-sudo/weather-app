@@ -18,7 +18,7 @@ const Topbar = () => {
   useEffect(() => {
     if (searchQuery.trim().length > 2) {
       axios
-        .get(`http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${searchQuery}`)
+        .get(`https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${searchQuery}`)
         .then((response) => {
           setSuggestions(response.data);
         })
